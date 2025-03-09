@@ -11,10 +11,10 @@ int pascal(int row, int col) {
 
 void printPascal(int n) {
   for (int i = 0; i < n; i++) {
-    stdout.write("F${i+1}");
+    stdout.write("F${i+1} ");
 
     for (int j = 0; j <= 1; j++) {
-  stdout.write("${pascal(i, j)}");
+  stdout.write("${pascal(i, j)} ");
 }
   }
   print("");
