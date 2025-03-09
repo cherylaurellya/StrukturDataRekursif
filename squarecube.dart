@@ -1,7 +1,7 @@
 int squareAux(int n, int result) {
   if (n == 0) 
   return result;
-  return squareAux(n - 1, result + 2 * n -1);
+  return squareAux(n - 1, result + (2 * n -1));
 }
 
 int square(int n) {
