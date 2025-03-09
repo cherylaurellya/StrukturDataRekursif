@@ -11,7 +11,7 @@ int square(int n) {
 int cubeAux(int n, int result) {
   if (n == 0)
   return result;
-  return cubeAux(n - 1, result + squareAux(n, 0));
+  return cubeAux(n - 1, result + (n * n));
 }
 
 int cube(int n) {
