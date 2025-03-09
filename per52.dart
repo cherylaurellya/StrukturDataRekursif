@@ -6,3 +6,7 @@ void tail(int i) {
     tail(i - 1);
   }
 }
+
+void main() {
+  tail(5);
+}
