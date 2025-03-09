@@ -1,25 +1,18 @@
-int squareAux(int n, int result) {
+int squareAux(int n, [int acc = 0]) {
   if (n == 0) 
-  return result;
-  return squareAux(n - 1, result + (2 * n -1));
+  return acc;
+  return squareAux(n - 1, acc + 2 * n -1);
 }
 
-int square(int n) {
-  return squareAux(n, 0);
-}
-
-int cubeAux(int n, int result) {
+int cubeAux(int n, [int acc = 0]) {
   if (n == 0)
-  return result;
-  return cubeAux(n - 1, result + (n * n));
+return acc;
+return cubeAux(n - 1, acc + 3 * n * n - 3 * n + 1);
 }
 
-int cube(int n) {
-  return cubeAux(n, 0);
-}
 
 void main() {
-  print("Square of 5: ${square(5)}");
-  print("Cube of 5: ${cube(5)}");
-  print("Cube of 123: ${cube(123)}");
+  print("Square of 5: ${squareAux(5)}");
+  print("Cube of 5: ${cubeAux(5)}");
+  print("Cube of 123: ${cubeAux(123)}");
 }
