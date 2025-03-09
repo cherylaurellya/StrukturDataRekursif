@@ -8,5 +8,6 @@ void tail(int i) {
 }
 
 void main() {
-  tail(5);
+  tail(-1);
+  
 }
